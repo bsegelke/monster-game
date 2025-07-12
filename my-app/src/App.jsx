@@ -1,33 +1,46 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { handleLogin } from './assets/api/frontend'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [name, setName] = useState("")
+   const [password, setPassword] = useState("")
 
   return (
     <>
+   
+      <h1>What up, freak, create an account</h1>
+    <form id="login" name="login" onSubmit={async()=>await handleLogin({name,password})}>
       <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <div style={{padding:10}}>
+      <label>
+        Enter your name:
+        <input
+          type="text"
+          value={name}
+          onChange={(e)=>setName(e.target.value)}
+         
+        />
+      </label>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+      <div>
+       <label>
+        Enter your password:
+        <input
+          type="text"
+          value={password}
+          onChange={(e)=>(setPassword(e.target.value))}
+         
+        />
+      </label>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      </div>
+      <div style={{padding:10}}>
+      <button  type="submit">Submit</button>
+      </div>
+    </form>
+      
+   
     </>
   )
 }

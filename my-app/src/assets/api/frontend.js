@@ -1,7 +1,8 @@
 export let handleLogin = async(payload)=>{
-     const url = "http://localhost:5173/?";
+     const url = "http://localhost:3000/api/auth/signup";
  
   try {
+    console.log("here1")
     const response = await fetch(url, 
         { method:"POST", 
             headers: { "Content-Type": "application/json", },
@@ -13,6 +14,7 @@ export let handleLogin = async(payload)=>{
     const json = await response.json();
     console.log(json);
   } catch (error) {
+    console.log("got caught")
     console.error(error.message);
   }
 }

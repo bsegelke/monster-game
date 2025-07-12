@@ -10,7 +10,10 @@ function App() {
     <>
    
       <h1>What up, freak, create an account</h1>
-    <form id="login" name="login" onSubmit={async()=>await handleLogin({name,password})}>
+    <form id="login" name="login"  onSubmit={async (e) => {
+    e.preventDefault(); 
+    await handleLogin({ name, password });
+  }}>
       <div>
       <div style={{padding:10}}>
       <label>

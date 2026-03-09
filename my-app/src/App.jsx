@@ -3,18 +3,18 @@ import { handleLogin } from './assets/api/frontend'
 import './App.css'
 
 const stats = [
-  { label: 'Total Users', value: '24,891', change: '+12%', color: '#6366f1', icon: '👥' },
-  { label: 'Revenue', value: '$184,230', change: '+8.3%', color: '#ec4899', icon: '💰' },
-  { label: 'Active Sessions', value: '3,042', change: '+5.1%', color: '#f59e0b', icon: '⚡' },
-  { label: 'Bugs Squashed', value: '99', change: '+99%', color: '#10b981', icon: '🐛' },
+  { label: 'Total Users', value: '24,891', change: '+12%', color: '#2ea364', icon: '◉' },
+  { label: 'Revenue', value: '$184,230', change: '+8.3%', color: '#36bf75', icon: '◈' },
+  { label: 'Active Sessions', value: '3,042', change: '+5.1%', color: '#56d591', icon: '◍' },
+  { label: 'Bugs Squashed', value: '99', change: '+99%', color: '#6ce3a3', icon: '◎' },
 ]
 
 const recentActivity = [
-  { user: 'Alice Monroe', action: 'Uploaded a new report', time: '2 min ago', avatar: '🧑‍💼' },
-  { user: 'James Carter', action: 'Closed 3 support tickets', time: '14 min ago', avatar: '🧑‍🔧' },
-  { user: 'Priya Patel', action: 'Deployed to production', time: '1 hr ago', avatar: '👩‍💻' },
-  { user: 'Sam Lee', action: 'Updated billing info', time: '3 hr ago', avatar: '🧑‍💻' },
-  { user: 'Dana Kim', action: 'Added 5 new products', time: 'Yesterday', avatar: '👩‍🎨' },
+  { user: 'Alice Monroe', action: 'Uploaded a new report', time: '2 min ago', avatar: 'AM' },
+  { user: 'James Carter', action: 'Closed 3 support tickets', time: '14 min ago', avatar: 'JC' },
+  { user: 'Priya Patel', action: 'Deployed to production', time: '1 hr ago', avatar: 'PP' },
+  { user: 'Sam Lee', action: 'Updated billing info', time: '3 hr ago', avatar: 'SL' },
+  { user: 'Dana Kim', action: 'Added 5 new products', time: 'Yesterday', avatar: 'DK' },
 ]
 
 const tasks = [
@@ -34,7 +34,7 @@ function App() {
       {/* Header */}
       <header className="header">
         <div className="header-left">
-          <span className="logo-mark">🌀</span>
+          <span className="logo-mark">◎</span>
           <span className="brand">Big Automation Test Dashy woowoo</span>
         </div>
         <nav className="header-nav">
@@ -44,7 +44,7 @@ function App() {
           <a href="#" className="nav-link">Settings</a>
         </nav>
         <div className="header-right">
-          <button className="notif-btn">🔔</button>
+          <button className="notif-btn">◔</button>
           <div className="avatar">BK</div>
         </div>
       </header>
@@ -52,7 +52,7 @@ function App() {
       <main className="main">
         {/* Page title */}
         <div className="page-title">
-          <h1>Good morning, Brandon 👋</h1>
+          <h1>Good morning, Brandon ◌</h1>
           <p>Here's what's happening with your project today.</p>
         </div>
 
@@ -128,7 +128,7 @@ function App() {
             <ul className="task-list">
               {tasks.map((t, i) => (
                 <li className="task-item" key={i}>
-                  <span className={`task-check ${t.done ? 'done' : ''}`}>{t.done ? '✅' : '⬜'}</span>
+                  <span className={`task-check ${t.done ? 'done' : ''}`}>{t.done ? '●' : '○'}</span>
                   <span className={`task-title ${t.done ? 'task-done' : ''}`}>{t.title}</span>
                 </li>
               ))}

@@ -4,10 +4,27 @@
   padding: 0;
 }
 
+:root {
+  --green-bg-950: #07130d;
+  --green-surface-900: #0d1e15;
+  --green-surface-800: #13261b;
+  --green-surface-700: #1a3326;
+  --green-border-700: #25513b;
+  --green-border-600: #2f674a;
+  --green-text-100: #e6f7ed;
+  --green-text-300: #badbc7;
+  --green-text-500: #82a993;
+  --green-text-600: #62886f;
+  --green-accent-300: #6ce3a3;
+  --green-accent-400: #56d591;
+  --green-accent-500: #36bf75;
+  --green-accent-600: #2ea364;
+}
+
 body {
   font-family: 'Segoe UI', system-ui, sans-serif;
-  background: #0f0f1a;
-  color: #e2e8f0;
+  background: var(--green-bg-950);
+  color: var(--green-text-100);
   min-height: 100vh;
   display: block;
 }
@@ -19,8 +36,8 @@ body {
   justify-content: space-between;
   padding: 0 2rem;
   height: 64px;
-  background: #16162a;
-  border-bottom: 1px solid #2d2d4e;
+  background: var(--green-surface-900);
+  border-bottom: 1px solid var(--green-border-700);
   position: sticky;
   top: 0;
   z-index: 100;
@@ -34,12 +51,13 @@ body {
 
 .logo-mark {
   font-size: 1.6rem;
+  color: var(--green-accent-400);
 }
 
 .brand {
   font-size: 1.25rem;
   font-weight: 700;
-  background: linear-gradient(90deg, #818cf8, #ec4899);
+  background: linear-gradient(90deg, var(--green-accent-300), var(--green-accent-500));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -50,7 +68,7 @@ body {
 }
 
 .nav-link {
-  color: #94a3b8;
+  color: var(--green-text-300);
   text-decoration: none;
   padding: 0.4rem 0.9rem;
   border-radius: 8px;
@@ -59,13 +77,13 @@ body {
 }
 
 .nav-link:hover {
-  background: #1e1e38;
-  color: #e2e8f0;
+  background: var(--green-surface-800);
+  color: var(--green-text-100);
 }
 
 .nav-link.active {
-  background: #1e1e38;
-  color: #818cf8;
+  background: var(--green-surface-800);
+  color: var(--green-accent-300);
   font-weight: 600;
 }
 
@@ -76,9 +94,9 @@ body {
 }
 
 .notif-btn {
-  background: #1e1e38;
-  border: 1px solid #2d2d4e;
-  color: #e2e8f0;
+  background: var(--green-surface-800);
+  border: 1px solid var(--green-border-700);
+  color: var(--green-text-100);
   border-radius: 8px;
   padding: 0.4rem 0.6rem;
   cursor: pointer;
@@ -87,14 +105,14 @@ body {
 }
 
 .notif-btn:hover {
-  background: #2d2d4e;
+  background: var(--green-surface-700);
 }
 
 .avatar {
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #6366f1, #ec4899);
+  background: linear-gradient(135deg, var(--green-accent-400), var(--green-accent-600));
   display: flex;
   align-items: center;
   justify-content: center;
@@ -121,7 +139,7 @@ body {
 }
 
 .page-title p {
-  color: #64748b;
+  color: var(--green-text-500);
   font-size: 0.95rem;
 }
 
@@ -148,21 +166,21 @@ body {
   flex-direction: column;
   gap: 0.45rem;
   font-size: 0.85rem;
-  color: #94a3b8;
+  color: var(--green-text-300);
 }
 
 .signup-input {
-  border: 1px solid #3b3b5c;
+  border: 1px solid var(--green-border-600);
   border-radius: 8px;
-  background: #1e1e38;
-  color: #e2e8f0;
+  background: var(--green-surface-800);
+  color: var(--green-text-100);
   padding: 0.55rem 0.7rem;
 }
 
 .signup-submit {
-  border: 1px solid #4f46e5;
-  background: #4338ca;
-  color: #fff;
+  border: 1px solid var(--green-accent-500);
+  background: var(--green-accent-600);
+  color: var(--green-text-100);
   border-radius: 8px;
   padding: 0.55rem 1rem;
 }
@@ -176,8 +194,8 @@ body {
 }
 
 .stat-card {
-  background: #16162a;
-  border: 1px solid #2d2d4e;
+  background: var(--green-surface-900);
+  border: 1px solid var(--green-border-700);
   border-radius: 16px;
   padding: 1.25rem 1.5rem;
   display: flex;
@@ -189,11 +207,13 @@ body {
 
 .stat-card:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+  box-shadow: 0 8px 24px rgba(17, 43, 29, 0.55);
 }
 
 .stat-icon {
   font-size: 2rem;
+  color: var(--accent);
+  line-height: 1;
 }
 
 .stat-info {
@@ -204,7 +224,7 @@ body {
 
 .stat-label {
   font-size: 0.78rem;
-  color: #64748b;
+  color: var(--green-text-500);
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
@@ -212,12 +232,12 @@ body {
 .stat-value {
   font-size: 1.5rem;
   font-weight: 700;
-  color: #f1f5f9;
+  color: var(--green-text-100);
 }
 
 .stat-change {
   font-size: 0.78rem;
-  color: #10b981;
+  color: var(--green-accent-400);
 }
 
 /* ── Bottom Grid ── */
@@ -234,8 +254,8 @@ body {
 }
 
 .card {
-  background: #16162a;
-  border: 1px solid #2d2d4e;
+  background: var(--green-surface-900);
+  border: 1px solid var(--green-border-700);
   border-radius: 16px;
   padding: 1.5rem;
 }
@@ -244,7 +264,7 @@ body {
   font-size: 1rem;
   font-weight: 600;
   margin-bottom: 1.25rem;
-  color: #c7d2fe;
+  color: var(--green-accent-300);
 }
 
 /* ── Activity ── */
@@ -262,7 +282,17 @@ body {
 }
 
 .activity-avatar {
-  font-size: 1.5rem;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  border: 1px solid var(--green-border-600);
+  background: var(--green-surface-800);
+  color: var(--green-accent-300);
+  font-size: 0.72rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   flex-shrink: 0;
 }
 
@@ -275,17 +305,17 @@ body {
 .activity-user {
   font-size: 0.88rem;
   font-weight: 600;
-  color: #e2e8f0;
+  color: var(--green-text-100);
 }
 
 .activity-action {
   font-size: 0.8rem;
-  color: #64748b;
+  color: var(--green-text-500);
 }
 
 .activity-time {
   font-size: 0.75rem;
-  color: #475569;
+  color: var(--green-text-600);
   white-space: nowrap;
 }
 
@@ -306,23 +336,28 @@ body {
 
 .task-check {
   font-size: 1rem;
+  color: var(--green-text-500);
+}
+
+.task-check.done {
+  color: var(--green-accent-400);
 }
 
 .task-title {
   font-size: 0.88rem;
-  color: #cbd5e1;
+  color: var(--green-text-300);
 }
 
 .task-done {
   text-decoration: line-through;
-  color: #475569;
+  color: var(--green-text-600);
 }
 
 .add-task-btn {
   width: 100%;
-  background: #1e1e38;
-  border: 1px dashed #3b3b5c;
-  color: #818cf8;
+  background: var(--green-surface-800);
+  border: 1px dashed var(--green-border-600);
+  color: var(--green-accent-300);
   border-radius: 8px;
   padding: 0.5rem;
   cursor: pointer;
@@ -331,7 +366,7 @@ body {
 }
 
 .add-task-btn:hover {
-  background: #2d2d4e;
+  background: var(--green-surface-700);
 }
 
 /* ── Bar Chart ── */
@@ -357,7 +392,7 @@ body {
 .bar {
   width: 100%;
   border-radius: 6px 6px 0 0;
-  background: linear-gradient(180deg, #818cf8, #6366f1);
+  background: linear-gradient(180deg, var(--green-accent-300), var(--green-accent-600));
   transition: opacity 0.2s;
 }
 
@@ -367,5 +402,5 @@ body {
 
 .bar-label {
   font-size: 0.72rem;
-  color: #475569;
+  color: var(--green-text-600);
 }

@@ -35,7 +35,7 @@ function App() {
       <header className="header">
         <div className="header-left">
           <span className="logo-mark">🌀</span>
-          <span className="brand">Brandon's Dash</span>
+          <span className="brand">Big Automation Test Dashy woowoo</span>
         </div>
         <nav className="header-nav">
           <a href="#" className="nav-link active">Overview</a>
